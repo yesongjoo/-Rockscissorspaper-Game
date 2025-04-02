@@ -2,14 +2,17 @@ import React from "react";
 import "./Box.css";
 
 const Box = (props) => {
-  console.log("props", props);
+  // console.log("props", props);
   return (
-    <div className="box">
-      <p className="title">{props.player}</p>
-      <img src={props.item?.img} />
-      <p>winner</p>
-      <div></div>
-      <p></p>
+    <div>
+      <h1 className="winner">{props.result}</h1>
+      <div className="box" style={{ borderColor: props.bordercolor }}>
+        <h1 className="title">{props.player}</h1>
+        <img src={props.item?.img} />
+
+        <div></div>
+        <p></p>
+      </div>
     </div>
   );
 };
